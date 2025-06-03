@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html {
+  /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #004080 transparent;
+}
+
+/* For Chrome, Edge, Safari */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #004080;
+  border-radius: 5rem;
+}
+
+
+body {
+  background-color: #f9f9f9!important;
+  line-height: 1.6;
+}
+
+
+
+.home-wrapper{
+    height: 100vh;
+    width: 100%;
+    background-image: url('assets/backgroundimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;
+}
+
+.darkness{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
