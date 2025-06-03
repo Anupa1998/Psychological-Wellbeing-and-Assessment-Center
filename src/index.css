@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme{
+    --color-cuswhite: oklch(97.1% 0.013 17.38);
+    --color-cusred: #2A0606;
+    --color-cusyellow: #f6bc0c;
+}
