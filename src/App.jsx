@@ -4,6 +4,7 @@ import Home from './pages/HomePage/Home'
 import SubNav from './components/nav/SubNav'
 import Navbar from './components/nav/Navbar'
 import AboutUs from './pages/HomePage/AboutUs'
+import Error404 from './components/error/Error404'
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                         <Navbar/>
                     </div>
                 <Routes>
+                    <Route path='*' element={<Error404/>}/>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/AboutUs' element={<AboutUs/>}/>
                     
