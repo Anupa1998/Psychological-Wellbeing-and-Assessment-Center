@@ -3,7 +3,7 @@ import img from '../../assets/UOPImageforabout.jpg'
 
 const AboutUs = () => {
   return (
-    <section className='py-24 px-6 lg:px-24 bg-gray-100'>
+    <section className='py-24 px-6 lg:px-24'>
       {/* 3rd type */}
       <div className=" px-4 md:px-12 lg:px-20">
         <div className="space-y-12">
