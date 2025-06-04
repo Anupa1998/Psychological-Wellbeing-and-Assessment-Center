@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import 'aos/dist/aos.css';
+
 import Home from './pages/HomePage/Home'
 import SubNav from './components/nav/SubNav'
 import Navbar from './components/nav/Navbar'
@@ -11,14 +13,15 @@ function App() {
         <>
             <BrowserRouter>
                     <div>
+                        <Navbar/>
+                    </div>
+                    <div>
                         <SubNav/>
                     </div>
 
-                    <div>
-                        <Navbar/>
-                    </div>
                 <Routes>
                     <Route path='*' element={<Error404/>}/>
+
                     <Route path='/' element={<Home/>}/>
                     <Route path='/AboutUs' element={<AboutUs/>}/>
                     
