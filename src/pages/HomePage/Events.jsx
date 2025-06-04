@@ -1,13 +1,20 @@
 import React from 'react'
+import EventCard from '../../components/EventCard/EventCard'
+
+
 
 const Events = () => {
     return (
-        <section className='py-24'>
+        <section className='py-24 px-6 lg:px-24'>
             <h2 className=' text-center text-3xl lg:text-3xl mb-16 font-semibold  text-gray-800'>Events & Workshop</h2>
 
-            <div className="w-full px-4">
+            <EventCard/>
+            
+
+
+            {/* <div className="w-full px-4">
                 <div className="flex flex-wrap justify-center gap-6">
-                    {/* Render one or multiple event cards */}
+                    
                     <div className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <img
                             className="w-full h-48 object-cover"
@@ -91,7 +98,7 @@ const Events = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
         </section>
