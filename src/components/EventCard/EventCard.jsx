@@ -42,7 +42,7 @@ const EventCard = () => {
               href="#tickets"
               className="inline-block text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-2 rounded-xl font-semibold shadow-lg transition duration-300 ease-in-out"
             >
-              View Tickets
+              Register
             </a>
           </div>
         </div>

@@ -8,7 +8,7 @@ const FirstSection = () => {
             <div className='darkness'></div>
             
             <div className='text-center z-10 text-cuswhite'>
-                <h1 className='text-5xl font-bold'>Your Mental Wellness Matters</h1>
+                <h1 className='text-4xl font-bold md:text-5xl'>Your Mental Wellness Matters</h1>
                 <p className='text-xl mt-2.5'>A safe space for students, staff, and families of the university <br /> to receive compassionate psychological support and care.</p>
 
                 <Link to={''}>

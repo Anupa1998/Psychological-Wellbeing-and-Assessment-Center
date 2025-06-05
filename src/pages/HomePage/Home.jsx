@@ -3,6 +3,7 @@ import FirstSection from './FirstSection'
 import AboutUs from './AboutUs'
 import Events from './Events'
 import Quotes from './Quotes'
+import Gallery from './gallery'
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
         <AboutUs/>
         <Quotes/>
         <Events/>
-        
+        <Gallery/>
     </>
   )
 }
