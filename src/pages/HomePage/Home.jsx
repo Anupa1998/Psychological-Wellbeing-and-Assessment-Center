@@ -3,7 +3,8 @@ import FirstSection from './FirstSection'
 import AboutUs from './AboutUs'
 import Events from './Events'
 import Quotes from './Quotes'
-import Gallery from './gallery'
+import ImageSet from './ImageSet'
+
 
 
 const Home = () => {
@@ -13,7 +14,7 @@ const Home = () => {
         <AboutUs/>
         <Quotes/>
         <Events/>
-        <Gallery/>
+        <ImageSet/>
     </>
   )
 }

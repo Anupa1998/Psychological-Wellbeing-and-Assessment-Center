@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Gallery = () => {
+const ImageSet = () => {
   return (
-    <section className='h-[50vh] w-full flex'>
+        <section className='h-[50vh] w-full flex'>
             <div className='max-w-1/3 w-full h-full bg-amber-100'>
                 
             </div>
@@ -18,4 +18,4 @@ const Gallery = () => {
   )
 }
 
-export default Gallery
+export default ImageSet
