@@ -5,8 +5,6 @@ import Events from './Events'
 import Quotes from './Quotes'
 import ImageSet from './ImageSet'
 
-
-
 const Home = () => {
   return (
     <>

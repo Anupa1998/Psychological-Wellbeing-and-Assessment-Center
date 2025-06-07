@@ -17,12 +17,12 @@ const EventCard = () => {
         <div className="md:w-2/3 w-full p-8 relative flex flex-col justify-between">
           {/* Gradient Date Badge */}
           <div className="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
-            FEB 26
+            APR 09
           </div>
 
           {/* Title & Subtitle */}
           <div>
-            <h2 className="text-gray-900 font-bold text-2xl mb-1">This Thing Called Life</h2>
+            <h2 className="text-gray-900 font-bold text-2xl mb-1">Headline</h2>
 
             {/* Time Info */}
             <div className="flex items-center gap-2 text-gray-600 text-sm font-medium mb-6">
@@ -32,7 +32,7 @@ const EventCard = () => {
 
             {/* Description */}
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              Join us for a tribute night with music, art, and performances celebrating the life and legacy of Prince. Enjoy live covers, themed drinks, and more.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda rerum, magni earum, iste natus qui, deleniti culpa eveniet esse corporis quos fuga quis! Molestiae saepe reprehenderit sit ducimus aliquam quam?
             </p>
           </div>
 

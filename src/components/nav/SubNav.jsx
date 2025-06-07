@@ -37,8 +37,8 @@ const SubNav = () => {
     const [menuopenmobile, setmenuopenmobilen] = useState(false);
 
     return (
-        <div className="border-t border-[#e8b910]">
-            <div className='xl:px-20 px-4 py-4 bg-[#560606] text-white'>
+        <div className="">
+            <div className='xl:px-20 px-4 py-4 bg-[#ffffff] text-gray-800'>
 
 
                 <div className=''>

@@ -50,7 +50,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className='xl:px-20 px-4 py-4 bg-[#560606] text-white'>
+        <div className='xl:px-20 px-4 py-4 bg-[#ffffff] border-b-2 border-cusred text-gray-700'>
             <div className="flex justify-between">
                 <div className="">
                     <a href="/">
@@ -64,7 +64,7 @@ const Navbar = () => {
                                 <div className="mx-2 font-semibold" key={index}>
                                     <div className="flex">
                                         <p className='mr-4'>
-                                            <a href={item.link} className="text-white">{item.name}</a>
+                                            <a href={item.link} className="text-gray-700">{item.name}</a>
                                         </p>
                                         {item.id === 6 ? <div className=""></div> : <div className="">|</div>}
                                     </div>
