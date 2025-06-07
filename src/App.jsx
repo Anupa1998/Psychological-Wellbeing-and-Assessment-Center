@@ -7,6 +7,7 @@ import SubNav from './components/nav/SubNav'
 import Navbar from './components/nav/Navbar'
 import AboutUs from './pages/HomePage/AboutUs'
 import Error404 from './components/error/Error404'
+import Footer from './components/Footer/footer';
 
 function App() {
     return (
@@ -26,6 +27,8 @@ function App() {
                     <Route path='/AboutUs' element={<AboutUs/>}/>
                     
                 </Routes>
+
+                    <Footer/>
             </BrowserRouter>
         </>
     )
