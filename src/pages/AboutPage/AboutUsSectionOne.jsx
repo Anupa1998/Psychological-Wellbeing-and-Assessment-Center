@@ -146,7 +146,10 @@ const AboutUsSectionOne = () => {
       </div>
 
       {/* Simple CTA Footer */}
-    
+      <div className="mt-24 bg-cusred text-white py-12 text-center">
+        <h2 className="text-2xl lg:text-3xl font-semibold mb-3">Your wellbeing matters.</h2>
+        <p className="text-lg">We’re here to support you—anytime, every step of the way.</p>
+      </div>
     </div>
 
   )

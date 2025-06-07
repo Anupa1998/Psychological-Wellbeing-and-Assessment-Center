@@ -6,10 +6,13 @@ import 'aos/dist/aos.css';
 import SubNav from './components/nav/SubNav'
 import Navbar from './components/nav/Navbar'
 import Error404 from './components/error/Error404'
-import Footer from './components/Footer/footer';
+
 
 import Home from './pages/HomePage/Home'
 import AboutUs from './pages/AboutPage/AboutUs';
+import Footer from './components/Footer/FooterNew';
+
+
 
 
 
