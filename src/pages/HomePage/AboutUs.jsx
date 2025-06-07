@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../assets/UOPImageforabout.jpg'
+
 
 const AboutUs = () => {
   return (

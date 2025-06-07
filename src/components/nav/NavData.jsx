@@ -9,7 +9,6 @@ const MainNavData = [
         name: 'FAQ',
         link: '/faq',
     },
-
 ]
 
 const secNavData = [
@@ -74,6 +73,7 @@ const secNavData = [
     {
         id: 2,
         name: 'About',
+        link: '/aboutus'
         // submenu: [
         //     {
         //         id: 1,

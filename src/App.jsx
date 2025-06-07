@@ -2,12 +2,16 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import 'aos/dist/aos.css';
 
-import Home from './pages/HomePage/Home'
+
 import SubNav from './components/nav/SubNav'
 import Navbar from './components/nav/Navbar'
-import AboutUs from './pages/HomePage/AboutUs'
 import Error404 from './components/error/Error404'
 import Footer from './components/Footer/footer';
+
+import Home from './pages/HomePage/Home'
+import AboutUs from './pages/AboutPage/AboutUs';
+
+
 
 function App() {
     return (
@@ -24,8 +28,8 @@ function App() {
                     <Route path='*' element={<Error404/>}/>
 
                     <Route path='/' element={<Home/>}/>
-                    <Route path='/AboutUs' element={<AboutUs/>}/>
-                    
+                    <Route path='/aboutus' element={<AboutUs/>}/>
+        
                 </Routes>
 
                     <Footer/>
