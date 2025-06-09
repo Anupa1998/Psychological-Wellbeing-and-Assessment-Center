@@ -16,6 +16,7 @@ const secNavData = [
     {
         id: 1,
         name: 'Home',
+        link: '/'
         // submenu: [
         //     {
         //         id: 1,
@@ -140,6 +141,7 @@ const secNavData = [
     {
         id: 3,
         name: 'Services',
+        link: '/services'
         // submenu: [
         //     { id: 1, name: 'Student Accomodation', link: 'https://sites.google.com/gs.pdn.ac.lk/stdaccdiv' },
         //     { id: 2, name: 'Student Admission', link: 'https://www.pdn.ac.lk/students/student-admission/' },
@@ -159,6 +161,7 @@ const secNavData = [
     {
         id: 4,
         name: "Team",
+        link: '/team'
         // submenu: [
         //     { id: 1, link: 'https://drive.google.com/drive/folders/1pjPejbOJ7UpznaS1Mgwp3tZAvbLFszFl', name: 'Annual Reports' },
         //     { id: 1, link: 'http://dlib.pdn.ac.lk/', name: 'Digital Library' },

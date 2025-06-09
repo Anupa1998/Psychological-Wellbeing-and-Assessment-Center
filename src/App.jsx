@@ -11,9 +11,8 @@ import Error404 from './components/error/Error404'
 import Home from './pages/HomePage/Home'
 import AboutUs from './pages/AboutPage/AboutUs';
 import Footer from './components/Footer/FooterNew';
-
-
-
+import Servicse from './pages/Services/Servicse';
+import Team from './pages/Team/Team';
 
 
 function App() {
@@ -29,9 +28,11 @@ function App() {
 
                 <Routes>
                     <Route path='*' element={<Error404/>}/>
-
                     <Route path='/' element={<Home/>}/>
                     <Route path='/aboutus' element={<AboutUs/>}/>
+                    <Route path='/services' element={<Servicse/>}/>
+                    <Route path='/team' element={<Team/>}/>
+
         
                 </Routes>
 

@@ -38,7 +38,7 @@ const SubNav = () => {
 
     return (
         <div className="">
-            <div className='xl:px-20 px-4 py-4 bg-[#ffffff] text-gray-800'>
+            <div className='xl:px-20 px-4 py-4 bg-[#ffffff] text-gray-800 border-b-2 border-cusred'>
 
 
                 <div className=''>
