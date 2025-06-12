@@ -6,6 +6,7 @@ import {
     UsersRound,
 } from "lucide-react";
 import ServiceCard from '../../components/ServicesCard/ServiceCard';
+import TitleHeader from '../../components/title/TitleHeader';
 
 
 
@@ -69,31 +70,34 @@ const Servicse = () => {
 
 
     return (
-        <section className="py-16 px-6 lg:px-24">
 
-            <h2 className="text-4xl font-bold text-center  mb-16">
-                Services Offered
-            </h2>
+        <div>
+            <TitleHeader>
+                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight drop-shadow-lg">
+                    Services Offered
+                </h2>
 
+            </TitleHeader>
+            <section className="py-16 px-6 lg:px-24">
+                <div className='grid grid-cols-2 gap-8'>
+                    {
+                        services.map((ele, index) => (
 
-            <div className='grid grid-cols-2 gap-8'>
-                {
-                    services.map((ele, index) => (
+                            <ServiceCard key={index}
+                                title={ele.title}
+                                icon={ele.icon}
+                                subtitle={ele.subtitle}
+                                description={ele.description}
+                                bullets={ele.bullets}
+                                closing={ele.closing}
+                            />
 
-                        <ServiceCard key={index}
-                            title={ele.title}
-                            icon={ele.icon}
-                            subtitle={ele.subtitle}
-                            description={ele.description}
-                            bullets={ele.bullets}
-                            closing={ele.closing}
-                        />
+                        ))
+                    }
 
-                    ))
-                }
-
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
 
     )
 }

@@ -3,6 +3,8 @@ import Modal from 'react-modal';
 import UopLogo from '../../assets/uoplogo.png';
 import { MainNavData, secNavData } from './NavData';
 import { FaSearch } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 
 // Set the app element for accessibility
 Modal.setAppElement('#root');
@@ -64,7 +66,7 @@ const Navbar = () => {
                                 <div className="mx-2 font-semibold" key={index}>
                                     <div className="flex">
                                         <p className='mr-4'>
-                                            <a href={item.link} className="text-gray-700">{item.name}</a>
+                                            <Link to={item.link} className="text-gray-700">{item.name}</Link>
                                         </p>
                                         {item.id === 6 ? <div className=""></div> : <div className="">|</div>}
                                     </div>

@@ -180,7 +180,7 @@ const secNavData = [
     {
         id: 5,
         name: 'Apointment',
-        link: '/RsearchAll'
+        link: '/appointment'
     },
 
     // Centers & Units
@@ -188,90 +188,8 @@ const secNavData = [
     {
         id: 6,
         name: 'Resources',
-        link: 'https://www.pdn.ac.lk/units-centres/'
+        link: '/resources'
     },
-
-
-
-    // administration
-
-    // {
-    //     id: 7,
-    //     name: "Administration",
-    //     // submenu: [
-    //     //     {
-    //     //         id: 1,
-    //     //         name: 'Administrative Division',
-    //     //         menusubL: [
-    //     //             { id: 1, link: 'https://sites.google.com/gs.pdn.ac.lk/acdestdiv', name: 'Academic Establishments' },
-    //     //             { id: 2, link: 'https://sites.google.com/gs.pdn.ac.lk/capwrkdiv', name: 'Capital Works' },
-    //     //             { id: 3, link: 'https://sites.google.com/gs.pdn.ac.lk/copmgtdiv', name: 'Corporate Management' },
-    //     //             { id: 4, link: 'https://sites.google.com/gs.pdn.ac.lk/cadiv', name: 'Council & Academic' },
-    //     //             { id: 5, link: 'https://sites.google.com/gs.pdn.ac.lk/genserdiv', name: 'General Service' },
-    //     //             { id: 6, link: 'https://sites.google.com/gs.pdn.ac.lk/legaldiv', name: 'Legal & Documentation' },
-    //     //             { id: 7, link: 'https://sites.google.com/gs.pdn.ac.lk/nonacdestdiv', name: 'Non-Academic Estab.' },
-    //     //             { id: 8, link: 'https://sites.google.com/gs.pdn.ac.lk/stdregdiv', name: 'Student Registration' },
-    //     //             { id: 9, link: 'https://sites.google.com/gs.pdn.ac.lk/stdserdiv', name: 'Student Service' },
-    //     //         ]
-    //     //     },
-    //     //     {
-    //     //         id: 2,
-    //     //         name: 'Financial Division',
-    //     //         menusubL: [
-    //     //             { id: 1, link: 'https://www.pdn.ac.lk/finance/', name: 'Final Accounts' },
-    //     //             { id: 2, link: 'https://www.pdn.ac.lk/foreign-supplies-unit/', name: 'Foriegn Supplies' },
-    //     //             { id: 3, link: 'https://www.pdn.ac.lk/loans-and-erp-system/', name: 'Loans & ERP' },
-    //     //             { id: 4, link: 'https://www.pdn.ac.lk/local-supplies-division/', name: 'Local Supplies' },
-    //     //             { id: 5, link: 'https://www.pdn.ac.lk/payment-division-budgetary-control/', name: 'Payment & Budgetary' },
-    //     //             { id: 6, link: 'https://www.pdn.ac.lk/portfolio-investment/', name: 'Portfolio Investment' },
-    //     //             { id: 7, link: 'https://www.pdn.ac.lk/research-funds-publication-self-financing-activitie/', name: 'Research, Funds & Publica.' },
-    //     //             { id: 8, link: '#', name: 'Retirement Benefits' },
-    //     //             { id: 9, link: '#', name: 'Revenue' },
-    //     //             { id: 10, link: 'https://www.pdn.ac.lk/salaries-and-wages/', name: 'Salaries & Wages' },
-    //     //             { id: 11, link: 'https://www.pdn.ac.lk/stores-management-section/', name: 'Stores Management' },
-    //     //             { id: 12, link: '#', name: 'Student Services' },
-    //     //         ]
-    //     //     },
-    //     //     {
-    //     //         id: 3,
-    //     //         name: 'Services',
-    //     //         menusubL: [
-    //     //             { id: 1, link: 'https://www.pdn.ac.lk/capital-project-unit/', name: 'Capital Works' },
-    //     //             { id: 2, link: 'https://sites.google.com/gs.pdn.ac.lk/maindiv', name: 'Maintenance' },
-    //     //             { id: 3, link: 'https://sites.google.com/gs.pdn.ac.lk/msldiv', name: 'Marshal Division' },
-    //     //             { id: 4, link: 'https://sites.google.com/gs.pdn.ac.lk/landscape-division', name: 'Landscape' },
-    //     //             { id: 5, link: 'https://sites.google.com/gs.pdn.ac.lk/phyedu', name: 'Physical Education' },
-    //     //             { id: 6, link: 'https://sites.google.com/gs.pdn.ac.lk/pro', name: 'Public Relations' },
-    //     //             { id: 7, link: 'https://www.pdn.ac.lk/security-department/', name: 'Security' },
-    //     //             { id: 8, link: 'https://sites.google.com/gs.pdn.ac.lk/statdiv', name: 'Statistics & Information' },
-    //     //             { id: 9, link: 'https://sites.google.com/gs.pdn.ac.lk/stdaccdiv', name: 'Student Accommodation' },
-    //     //         ]
-    //     //     },
-    //     //     {
-    //     //         id: 4,
-    //     //         name: 'Others',
-    //     //         menusubL: [
-    //     //             { id: 1, link: 'https://sites.google.com/gs.pdn.ac.lk/intaudtdiv', name: 'Internal Audit' },
-    //     //         ]
-    //     //     }
-    //     // ]
-    // },
-
-    // Alumni
-
-    // {
-    //     id: 8,
-    //     name: 'Alumni',
-    //     link: 'https://www.pdn.ac.lk/uop-alumni/'
-    // },
-
-    // Vacancies
-
-    // {
-    //     id: 9,
-    //     name: 'Vacancies',
-    //     link: 'https://www.pdn.ac.lk/vacancies/'
-    // }
 ]
 
 export { MainNavData, secNavData };

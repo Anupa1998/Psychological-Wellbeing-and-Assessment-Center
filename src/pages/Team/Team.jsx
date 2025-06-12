@@ -1,28 +1,31 @@
 import React from 'react'
+import TeamCard from '../../components/TeamCard/TeamCard'
+import TitleHeader from '../../components/title/TitleHeader'
 
 
 const Team = () => {
     return (
-        <div className=' grid grid-cols-3'>
+        <div>
+            <TitleHeader>
+                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight drop-shadow-lg">
+                    Compassionate. Qualified. Here for You.
+                </h2>
+                <p className="text-white/90 text-sm md:text-base leading-relaxed italic">
+                    Our team includes experienced psychologists, counsellors, and facilitators. We work collaboratively on a roster basis, ensuring access to a wide range of expertise.
+                </p>
+            </TitleHeader>
 
-
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fwww.gravatar.com%2Favatar%2F2c7d99fe281ecd3bcd65ab915bac6dd5%3Fs%3D250" alt="" />
-                </a>
-                <div class="p-5">
-
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Name</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">positoin</p>
-                    
+            <section className="py-16 px-6 lg:px-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
+                    <TeamCard />
+                    <TeamCard />
                 </div>
-            </div>
-
-
-
+            </section>
         </div>
+
+
+
+
     )
 }
 

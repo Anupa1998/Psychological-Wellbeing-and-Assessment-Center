@@ -13,6 +13,9 @@ import AboutUs from './pages/AboutPage/AboutUs';
 import Footer from './components/Footer/FooterNew';
 import Servicse from './pages/Services/Servicse';
 import Team from './pages/Team/Team';
+import Resources from './pages/Resources/Resources';
+import Faq from './pages/Faqs/Faq';
+import Apointment from './pages/Apointment/Apointment';
 
 
 function App() {
@@ -32,8 +35,10 @@ function App() {
                     <Route path='/aboutus' element={<AboutUs/>}/>
                     <Route path='/services' element={<Servicse/>}/>
                     <Route path='/team' element={<Team/>}/>
+                    <Route path='/resources' element={<Resources/>}/>
+                    <Route path='/appointment' element={<Apointment/>}/>
+                    <Route path='/faq' element={<Faq/>}/>
 
-        
                 </Routes>
 
                     <Footer/>
