@@ -6,9 +6,13 @@ const Resources = () => {
     return (
         <div>
             <TitleHeader>
-                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight drop-shadow-lg">
-                    Resources
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight drop-shadow-lg">
+                    Mental Health Resources
                 </h2>
+
+                <p className="text-white/90 text-sm md:text-base leading-relaxed italic">
+                    Practical advice to help you stay emotionally balanced and mentally strong.
+                </p>
             </TitleHeader>
 
             <section className="py-16 px-6 lg:px-24">

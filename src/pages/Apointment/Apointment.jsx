@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TitleHeader from '../../components/title/TitleHeader'
 import { FaPhoneAlt, FaEnvelope, FaClock, FaUserFriends } from 'react-icons/fa';
-import { HiOutlineClipboardList } from 'react-icons/hi';
+import ApointMentForm from './ApointMentForm';
+import ApointmentDetails from './ApointmentDetails';
 
 const Apointment = () => {
+    const [formDisplay, setFormDisplay] = useState(false);
+
+    const handleFormDisplay = () => {
+        setFormDisplay(true);
+    }
+
     return (
         <div>
             <TitleHeader>
@@ -17,70 +24,48 @@ const Apointment = () => {
                 </p>
             </TitleHeader>
 
-            <div className="bg-indigo-50 p-4 rounded-xl">
-                <h3 className="text-xl font-semibold text-indigo-700 flex items-center gap-2">
-                    <FaUserFriends /> Who Can Book?
-                </h3>
-                <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                    <li>University of Peradeniya students</li>
-                    <li>Academic and non-academic staff</li>
-                    <li>Immediate family members of students and staff</li>
-                </ul>
-            </div>
+            <section className='py-16 px-6 lg:px-24'>
 
-            
-            <div className="bg-blue-50 p-4 rounded-xl">
-                <h3 className="text-xl font-semibold text-blue-700 flex items-center gap-2">
-                    <HiOutlineClipboardList /> How It Works
-                </h3>
-                <ol className="list-decimal list-inside text-gray-700 mt-2 space-y-1">
-                    <li>Submit the form with your preferred time and reason for the visit</li>
-                    <li>Our team will contact you within 24 hours to confirm</li>
-                    <li className="flex items-center gap-2">
-                        <FaClock className="text-blue-600" />
-                        Walk-in available: <strong>9:00 AM – 4:00 PM (Weekdays only)</strong>
-                    </li>
-                </ol>
-                <div className="mt-4">
-                    {/* Replace with your actual form link or route */}
+                <ApointmentDetails />
+
+
+                <div className="my-8">
                     <a
-                        href="#"
-                        className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300"
+                        a href="#form"
+                        className="bg-cusred cursor-pointer text-white inline-block  border font-semibold py-2 px-6 rounded-lg transition duration-300"
+                        onClick={handleFormDisplay}
                     >
                         Book an Appointment
+
+                       
                     </a>
+                    <p className="mt-2 text-sm text-gray-600 italic">
+                        All services are free and strictly confidential.
+                    </p>
                 </div>
-                <p className="mt-2 text-sm text-gray-600 italic">
-                    All services are free and strictly confidential.
-                </p>
-            </div>
 
+                {/* form */}
+                <div id='form' className={`px-4 ${formDisplay ? 'block' : 'hidden'}`}>
+                    <ApointMentForm />
+                </div>
+                {/* form section end */}
 
-
-            <p className="text-sm italic text-gray-500 border-l-4 border-yellow-300 pl-4">
-                The above is a sample form. A new sample form has been attached in the Annexture section.
-            </p>
-
-
-
-            <div className="bg-gray-50 p-4 rounded-xl">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Contact Details for Urgent Help</h3>
-                <p className="text-gray-700 space-y-1">
-                    <span className="block font-medium">Psychological Wellbeing and Assessment Center</span>
-                    <span className="block">University of Peradeniya</span>
-                    <span className="flex items-center gap-2 mt-1">
-                        <FaPhoneAlt className="text-green-600" />
-                        <span className="text-gray-800">Tel. No : <strong>[Insert Phone Number]</strong></span>
-                    </span>
-                    <span className="flex items-center gap-2 mt-1">
-                        <FaEnvelope className="text-red-500" />
-                        <span className="text-gray-800">Email : <strong>[Insert Email Address]</strong></span>
-                    </span>
-                </p>
-            </div>
-
-
-            
+                <div className=" mt-16">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Contact Details for Urgent Help</h3>
+                    <p className="text-gray-700 space-y-1">
+                        <span className="block font-medium">Psychological Wellbeing and Assessment Center</span>
+                        <span className="block">University of Peradeniya</span>
+                        <span className="flex items-center gap-2 mt-1">
+                            <FaPhoneAlt className="text-green-600" />
+                            <span className="text-gray-800">Tel. No : <strong>[Insert Phone Number]</strong></span>
+                        </span>
+                        <span className="flex items-center gap-2 mt-1">
+                            <FaEnvelope className="text-red-500" />
+                            <span className="text-gray-800">Email : <strong>[Insert Email Address]</strong></span>
+                        </span>
+                    </p>
+                </div>
+            </section>
         </div>
     )
 }

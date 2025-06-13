@@ -1,11 +1,11 @@
 
 :root{
-    --red : #f6bc0c;
+    --yellow : #f6bc0c;
 }
 
 .item {
     background: #ffffff none repeat scroll 0 0;
-    border-left: 2px solid var(--red);
+    border-left: 2px solid var(--yellow);
     -moz-box-shadow: 0 0 10px #cccccc;
     -webkit-box-shadow: 0 0 10px #cccccc;
     -o-box-shadow: 0 0 10px #cccccc;
@@ -18,7 +18,7 @@
 
 
 .item::after {
-    background: var(--red) none repeat scroll 0 0;
+    background: var(--yellow) none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: -100%;

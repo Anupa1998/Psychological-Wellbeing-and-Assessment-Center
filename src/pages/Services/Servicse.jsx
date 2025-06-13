@@ -73,10 +73,13 @@ const Servicse = () => {
 
         <div>
             <TitleHeader>
-                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight drop-shadow-lg">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight drop-shadow-lg">
                     Services Offered
                 </h2>
 
+                <p className="text-white/90 text-sm md:text-base leading-relaxed italic">
+                        A variety of mental health services designed to meet your unique needs.
+                </p>
             </TitleHeader>
             <section className="py-16 px-6 lg:px-24">
                 <div className='grid grid-cols-2 gap-8'>
