@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Faqcard from '../../components/faq/faqcard'
+import Faqcard from '../../components/faq/Faqcard'
 
 const Faq = () => {
     const data = [
