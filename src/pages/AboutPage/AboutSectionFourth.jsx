@@ -3,7 +3,7 @@ import React from 'react'
 const AboutSectionFourth = () => {
     return (
         <section className='px-6 lg:px-24 py-16 cursor-default'>
-            <div className='customShadow p-8 rounded-lg'>
+            <div className='customShadow p-8 rounded-2xl'>
                 <h2 className="text-3xl font-bold text-cusred mb-4 border-b-2 border-cuswebyellow inline-block">Overview of the Process</h2>
                 <p className="text-lg leading-relaxed text-gray-800">
                     You can walk in or schedule an appointment. After your first contact, you might start with a brief screening

@@ -5,7 +5,7 @@
 
 .item {
     background: #ffffff none repeat scroll 0 0;
-    border-left: 2px solid var(--yellow);
+    
     -moz-box-shadow: 0 0 10px #cccccc;
     -webkit-box-shadow: 0 0 10px #cccccc;
     -o-box-shadow: 0 0 10px #cccccc;

@@ -3,7 +3,7 @@ import './servicecardstyle.css'
 
 const ServiceCard = ({ title, icon, subtitle, description, bullets, closing }) => {
     return (
-        <div className="group item group cursor-pointer rounded-lg">
+        <div className="group item group cursor-pointer rounded-2xl border-l-4 border-l-cuswebyellow">
             <div className='flex items-center mb-8'>
                 <div className="w-16 h-16 bg-cuswebyellow rounded-full p-2 flex justify-center items-center border-3 border-cusred group-hover:border-white duration-300">
                     {icon}

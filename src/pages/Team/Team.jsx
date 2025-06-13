@@ -61,8 +61,14 @@ const Team = () => {
                     <div className="bg-white max-w-xl w-full rounded-lg shadow-xl p-6 relative">
                         <button onClick={() => setAboutShow(false)} className="absolute top-2 right-2 text-sm text-red-600"><FaTimes className=' text-lg cursor-pointer'/></button>
                         <h2 className="text-2xl font-bold text-gray-800">{selectedMember.name}</h2>
-                        <p className="text-sm text-gray-700 mb-4 italic">{selectedMember.position}</p>
-                        <p className="text-gray-800 mt-2 leading-relaxed">{selectedMember.about}</p>
+                        <p className=" text-gray-700 italic">{selectedMember.position}</p>
+                        {
+                            selectedMember.expertise &&(
+                                <p className=" text-gray-700 italic mt-2"><span className=' font-semibold'>Expertise: </span>  {selectedMember.expertise}</p>
+                            )
+                        }
+
+                        <p className="text-gray-600 mt-4 leading-relaxed">{selectedMember.about}</p>
                     </div>
                 </div>
             )}

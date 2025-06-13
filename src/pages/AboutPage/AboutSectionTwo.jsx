@@ -6,7 +6,7 @@ const AboutSectionTwo = () => {
         <div className='px-6 lg:px-24 py-16 cursor-default'>
             <div className="">
                 {/* Section: Who is it For */}
-                <section className=' text-left customShadow p-8  rounded-lg'>
+                <section className=' text-left customShadow p-8  rounded-2xl'>
                     <h2 className="text-3xl font-bold text-cusred mb-4 border-b-2 border-b-cuswebyellow inline-block ">Who the Centre is For</h2>
                     <p className="text-lg leading-relaxed text-gray-800">
                         The Psychological Wellbeing and Assessment Centre serves the entire University of Peradeniya community, including students, academic staff, and non-academic staff.
@@ -23,7 +23,7 @@ const AboutSectionTwo = () => {
 
 
                 {/* Section: Brief Introduction */}
-                <section className=' text-left mt-16 customShadow p-8 rounded-lg'>
+                <section className=' text-left mt-16 customShadow p-8 rounded-2xl'>
                     <h2 className="text-3xl font-bold text-cusred mb-4 border-b-2 border-cuswebyellow inline-block">A Brief Introduction</h2>
                     <p className="text-lg leading-relaxed text-gray-800">
                         The Centre is committed to enhancing the emotional, social, and academic wellbeing of the university community. <br /> <br />

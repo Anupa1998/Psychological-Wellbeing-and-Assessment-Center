@@ -24,20 +24,16 @@ const Apointment = () => {
                 </p>
             </TitleHeader>
 
-            <section className='py-16 px-6 lg:px-24'>
-
+            <section className='pt-16 px-6 lg:px-24'>
                 <ApointmentDetails />
-
 
                 <div className="my-8">
                     <a
-                        a href="#form"
+                        href="#form"
                         className="bg-cusred cursor-pointer text-white inline-block  border font-semibold py-2 px-6 rounded-lg transition duration-300"
                         onClick={handleFormDisplay}
                     >
                         Book an Appointment
-
-                       
                     </a>
                     <p className="mt-2 text-sm text-gray-600 italic">
                         All services are free and strictly confidential.
@@ -50,22 +46,22 @@ const Apointment = () => {
                 </div>
                 {/* form section end */}
 
-                <div className=" mt-16">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Contact Details for Urgent Help</h3>
-                    <p className="text-gray-700 space-y-1">
-                        <span className="block font-medium">Psychological Wellbeing and Assessment Center</span>
-                        <span className="block">University of Peradeniya</span>
-                        <span className="flex items-center gap-2 mt-1">
-                            <FaPhoneAlt className="text-green-600" />
-                            <span className="text-gray-800">Tel. No : <strong>[Insert Phone Number]</strong></span>
-                        </span>
-                        <span className="flex items-center gap-2 mt-1">
-                            <FaEnvelope className="text-red-500" />
-                            <span className="text-gray-800">Email : <strong>[Insert Email Address]</strong></span>
-                        </span>
-                    </p>
-                </div>
             </section>
+            <div className="py-8 text-white px-6 lg:px-24  bg-cusred">
+                <h3 className="text-xl font-semibold  mb-2 ">Contact Details for Urgent Help</h3>
+                <p className=" space-y-1 text-gray-200">
+                    <span className="block font-medium">Psychological Wellbeing and Assessment Center</span>
+                    <span className="block">University of Peradeniya</span>
+                    <span className="flex items-center gap-2 mt-1">
+                        <FaPhoneAlt className="text-cuswebyellow" />
+                        <span className=" ">Tel. No : <strong>0812 392 816</strong></span>
+                    </span>
+                    <span className="flex items-center gap-2 mt-1">
+                        <FaEnvelope className="text-cuswebyellow" />
+                        <span className=" ">Email : <strong>hod.psy@arts.pdn.ac.lk</strong></span>
+                    </span>
+                </p>
+            </div>
         </div>
     )
 }

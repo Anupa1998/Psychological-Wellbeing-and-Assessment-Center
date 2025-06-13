@@ -11,9 +11,8 @@ const TitleHeader = ({children}) => {
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm"></div>
 
-            <div className="relative z-10 max-w-3xl text-left text-white space-y-1">
+            <div className="relative z-10 max-w-5xl text-left text-white space-y-1">
                 {children}
-                
             </div>
         </div>
     )

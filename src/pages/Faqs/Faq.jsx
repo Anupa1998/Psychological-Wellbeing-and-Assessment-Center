@@ -56,13 +56,9 @@ const Faq = () => {
                             onClick={() => handleToggle(index)}
                         />
                     ))
-
                 }
             </div>
         </section>
-
-
-
     )
 }
 
