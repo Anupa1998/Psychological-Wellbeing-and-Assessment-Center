@@ -1,15 +1,26 @@
 import React from 'react'
 import EventCard from '../../components/EventCard/EventCard'
+import Button from '../../components/Button/Button'
 
 
 
 const Events = () => {
     return (
         <section className='py-24 px-6 lg:px-24'>
-            <h2 className=' text-center text-3xl lg:text-3xl mb-16 font-semibold  text-gray-800'>Events & Workshop</h2>
+            <h2 data-aos="zoom-in" className=' text-center text-3xl lg:text-3xl mb-16 font-semibold  text-gray-800'>Events & Workshop</h2>
 
-            <EventCard/>
-            
+
+            <div className=' grid md:grid-cols-2 gap-8 '>
+                <EventCard />
+                <EventCard />
+            </div>
+
+            <div className=' flex justify-center mt-16'>
+                <Button title={'More Event'} />
+
+            </div>
+
+
 
 
             {/* <div className="w-full px-4">

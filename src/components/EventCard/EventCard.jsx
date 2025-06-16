@@ -2,8 +2,8 @@ import React from "react";
 
 const EventCard = () => {
   return (
-    <div className="w-full">
-      <div className=" mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+    <div data-aos="zoom-in" className="w-full">
+      <div className="customShadow mx-auto bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row">
         {/* Image Section */}
         <div className="md:w-1/3 w-full h-64 md:h-auto">
           <img

@@ -1,24 +1,62 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import AboutUs from './AboutUs'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import pic from '../../assets/backgroundimage.jpg';
+import pic2 from '../../assets/backgroundimage2.jpg';
+import Button from '../../components/Button/Button';
+// import pic3 from '../../assets/backgroundimage2.jpg';
+
+const bgImages = [pic, pic2];
 
 const FirstSection = () => {
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % bgImages.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <section className='home-wrapper'>
-            <div className='darkness'></div>
-            
-            <div className='text-center z-10 text-cuswhite'>
-                <h1 className='text-4xl font-bold md:text-5xl'>Your Mental Wellness Matters</h1>
-                <p className='text-xl mt-2.5'>A safe space for students, staff, and families of the university <br /> to receive compassionate psychological support and care.</p>
+        <section className="home-wrapper relative overflow-hidden">
+            {bgImages.map((img, index) => (
+                <div
+                    key={index}
+                    className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out ${index === current ? 'opacity-100 z-0' : 'opacity-0'
+                        }`}
+                    style={{ backgroundImage: `url(${img})` }}
+                ></div>
+            ))}
 
-                <Link to={''}>
-                    <p className='mt-5 hover:bg-transparent duration-500 text-xl border-2 px-3 py-2 bg-cusyellow border-cusyellow rounded-lg inline-block'>Book an appointment</p>
-                </Link>
 
+            {/* Text content */}
+            <div data-aos="zoom-in"
+                
+                className="relative z-20 text-center text-cuswhite">
+                <h1
+                    className="text-4xl font-bold md:text-5xl"
+                >
+                    Your Mental Wellness Matters
+                </h1>
 
+                <p
+                    className="text-xl mt-2.5">
+                    A safe space for students, staff, and families of the university <br /> to receive compassionate psychological support and care.
+                </p>
+
+                <div>
+                    
+                </div>
+                
+                <div className=' mt-5'>
+                    <Link to={''}>
+                        <Button title={'Book an appointment'} />
+                    </Link>
+
+                </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default FirstSection
+export default FirstSection;
