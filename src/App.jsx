@@ -20,6 +20,9 @@ import Resources from './pages/Resources/Resources';
 import Faq from './pages/Faqs/Faq';
 import Apointment from './pages/Apointment/Apointment';
 import { useEffect } from 'react';
+import AllWorkshop from './pages/Workshop/AllWorkshop';
+import AllNewsEvent from './pages/NewsEvent/AllNewsEvent';
+import SingleNewsEvent from './pages/NewsEvent/SingleNewsEvent';
 
 
 function App() {
@@ -47,6 +50,12 @@ function App() {
                     <Route path='/resources' element={<Resources />} />
                     <Route path='/appointment' element={<Apointment />} />
                     <Route path='/faq' element={<Faq />} />
+
+                    <Route path='/workshops' element={<AllWorkshop/>} />
+                    <Route path='/newsevent' element={<AllNewsEvent/>} />
+
+
+                    <Route path='/newsevent/:newsid' element={<SingleNewsEvent/>} />
 
                 </Routes>
 

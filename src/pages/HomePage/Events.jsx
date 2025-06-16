@@ -1,116 +1,25 @@
 import React from 'react'
 import EventCard from '../../components/EventCard/EventCard'
 import Button from '../../components/Button/Button'
-
+import { data } from '../../datasets/eventData'
 
 
 const Events = () => {
     return (
         <section className='py-24 px-6 lg:px-24'>
-            <h2 data-aos="zoom-in" className=' text-center text-3xl lg:text-3xl mb-16 font-semibold  text-gray-800'>Events & Workshop</h2>
+            <h2 data-aos="zoom-in" className='after:block after:h-[2px] after:w-12 after:mx-auto after:bg-cuswebyellow after:mt-1 text-center text-3xl lg:text-3xl mb-16 font-semibold  text-gray-800'>Workshop</h2>
 
-
-            <div className=' grid md:grid-cols-2 gap-8 '>
-                <EventCard />
-                <EventCard />
+            <div className='grid md:grid-cols-2 gap-8'>
+                {data
+                    .filter((ele, index) => index < 2)
+                    .map((ele, index) => (
+                        <EventCard key={ele.id || index} event={ele} />
+                    ))}
             </div>
 
-            <div className=' flex justify-center mt-16'>
-                <Button title={'More Event'} />
-
+            <div data-aos="zoom-in" className=' flex justify-center mt-16'>
+                <Button title={'Explore more workshop'} color='#2A0606' to='/workshops' />
             </div>
-
-
-
-
-            {/* <div className="w-full px-4">
-                <div className="flex flex-wrap justify-center gap-6">
-                    
-                    <div className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <img
-                            className="w-full h-48 object-cover"
-                            src="https://cdn.pixabay.com/photo/2025/05/26/10/27/rock-9622937_640.jpg"
-                            alt="Event"
-                        />
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold text-gray-800 mb-2">Tech Conference 2025</h3>
-                            <p className="text-sm text-gray-600 mb-4">
-                                Join leading experts and innovators in technology for a day of inspiration and connection.
-                            </p>
-                            <div className="flex items-center justify-between text-sm text-gray-500">
-                                <span><i className="far fa-calendar-alt mr-1"></i>June 15, 2025</span>
-                                
-                            </div>
-                            <button className="mt-4 w-full bg-indigo-600 text-white py-2 rounded-xl hover:bg-indigo-700 transition">
-                                Register Now
-                            </button>
-                        </div>
-                    </div>
-
-                   
-
-
-
-
-
-
-
-                    <div className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <img
-                            className="w-full h-48 object-cover"
-                            src="https://cdn.pixabay.com/photo/2025/05/26/10/27/rock-9622937_640.jpg"
-                            
-                            alt="Event"
-                        />
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold text-gray-800 mb-2">Tech Conference 2025</h3>
-                            <p className="text-sm text-gray-600 mb-4">
-                                Join leading experts and innovators in technology for a day of inspiration and connection.
-                            </p>
-                            <div className="flex items-center justify-between text-sm text-gray-500">
-                                <span><i className="far fa-calendar-alt mr-1"></i>June 15, 2025</span>
-                                
-                            </div>
-                            <button className="mt-4 w-full bg-indigo-600 text-white py-2 rounded-xl hover:bg-indigo-700 transition">
-                                Register Now
-                            </button>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <img
-                            className="w-full h-48 object-cover"
-                            src="https://cdn.pixabay.com/photo/2025/05/26/10/27/rock-9622937_640.jpg"
-                            alt="Event"
-                        />
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold text-gray-800 mb-2">Tech Conference 2025</h3>
-                            <p className="text-sm text-gray-600 mb-4">
-                                Join leading experts and innovators in technology for a day of inspiration and connection.
-                            </p>
-                            <div className="flex items-center justify-between text-sm text-gray-500">
-                                <span><i className="far fa-calendar-alt mr-1"></i>June 15, 2025</span>
-                                
-                            </div>
-                            <button className="mt-4 w-full bg-indigo-600 text-white py-2 rounded-xl hover:bg-indigo-700 transition">
-                                Register Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
 
         </section>
     )

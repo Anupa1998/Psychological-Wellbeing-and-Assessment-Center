@@ -34,25 +34,20 @@ const FirstSection = () => {
                 
                 className="relative z-20 text-center text-cuswhite">
                 <h1
-                    className="text-4xl font-bold md:text-5xl"
+                    className="text-4xl font-bold md:text-5xl text-shadow-lg/30"
                 >
                     Your Mental Wellness Matters
                 </h1>
 
                 <p
-                    className="text-xl mt-2.5">
+                    className="text-xl mt-2.5 text-shadow-lg/30">
                     A safe space for students, staff, and families of the university <br /> to receive compassionate psychological support and care.
                 </p>
 
-                <div>
-                    
-                </div>
                 
-                <div className=' mt-5'>
-                    <Link to={''}>
-                        <Button title={'Book an appointment'} />
-                    </Link>
 
+                <div className=' mt-5'>
+                        <Button title={'Book an appointment'} color={'#f6bc0c'} to='/appointment' />
                 </div>
             </div>
         </section>

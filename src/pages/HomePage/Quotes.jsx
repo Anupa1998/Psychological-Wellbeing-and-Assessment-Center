@@ -12,7 +12,7 @@ const Quotes = () => {
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
 
       {/* Quote Box */}
-      <div data-aos="zoom-in" className="relative z-10 max-w-3xl text-center text-white px-6 py-8  rounded-2xl animate-fade-in-up">
+      <div data-aos="zoom-in" className="text-shadow-lg/30 relative z-10 max-w-3xl text-center text-white px-6 py-8  rounded-2xl animate-fade-in-up">
         <p className="text-xl md:text-2xl font-medium leading-relaxed">
           “You don’t have to be positive all the time. It’s perfectly okay to feel
           sad, angry, annoyed, frustrated, scared, or anxious. Having feelings

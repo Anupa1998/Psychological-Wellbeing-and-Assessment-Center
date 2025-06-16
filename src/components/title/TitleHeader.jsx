@@ -9,7 +9,7 @@ const TitleHeader = ({children}) => {
             style={{ backgroundImage: `url(${imgOne})` }}
         >
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-black opacity-10"></div>
 
             <div className="relative z-10 max-w-5xl text-left text-white space-y-1">
                 {children}

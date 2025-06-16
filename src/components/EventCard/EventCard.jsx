@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const EventCard = () => {
+const EventCard = ({event}) => {
   return (
     <div data-aos="zoom-in" className="w-full">
       <div className="customShadow mx-auto bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row">
         {/* Image Section */}
-        <div className="md:w-1/3 w-full h-64 md:h-auto">
+        <div className="md:w-1/3 w-full h-64 md:h-auto overflow-hidden">
           <img
-            className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1050&q=80"
+            className="w-full h-full object-cover hover:scale-105  duration-300"
+            src={event.image}
             alt="Event"
           />
         </div>
@@ -16,31 +17,35 @@ const EventCard = () => {
         {/* Content Section */}
         <div className="md:w-2/3 w-full p-8 relative flex flex-col justify-between">
           {/* Gradient Date Badge */}
-          <div className="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-[#f6bc0c] via-orange-400 to-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
             APR 09
           </div>
 
           {/* Title & Subtitle */}
           <div>
-            <h2 className="text-gray-900 font-bold text-2xl mb-1">Headline</h2>
+            <Link to={''}>
+              <h2 className="text-gray-800 font-bold text-2xl mb-1">{event.headline}</h2>
+            </Link>
 
             {/* Time Info */}
             <div className="flex items-center gap-2 text-gray-600 text-sm font-medium mb-6">
-              
-              Mon, APR 09 · 7:00 PM – 10:00 PM
+              {event.date} - {event.time}
             </div>
 
             {/* Description */}
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda rerum, magni earum, iste natus qui, deleniti culpa eveniet esse corporis quos fuga quis! Molestiae saepe reprehenderit sit ducimus aliquam quam?
+              {event.shortDescription}
             </p>
           </div>
 
           {/* Button */}
           <div className="mt-auto">
             <a
-              href="#tickets"
-              className="inline-block text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-2 rounded-xl font-semibold shadow-lg transition duration-300 ease-in-out"
+              href={event.registerLink}
+              target="_blank"
+              className="inline-block text-center bg-gradient-to-r from-[#f6bc0c] via-orange-400 to-red-500
+                       text-white px-6 py-2 rounded-xl font-semibold shadow-lg transition duration-300 ease-in-out
+                        hover:scale-105 hover:shadow-xl hover:brightness-110"
             >
               Register
             </a>
