@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import UopLogo from '../../assets/uoplogo.png';
+import UopLogo from '../../assets/crest.png';
 import { MainNavData, secNavData } from './NavData';
 import { FaSearch } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -52,12 +52,19 @@ const Navbar = () => {
     };
 
     return (
-        <div className='xl:px-20 px-4 py-4 bg-[#ffffff] border-b-2 border-cusred text-gray-700'>
+        <div className='xl:px-20 px-4 py-2 bg-[#ffffff] border-b-2 border-cusred text-gray-800'>
             <div className="flex justify-between">
-                <div className="">
-                    <a href="/">
-                        <img src={UopLogo} alt="" className='xl:h-20 h-12 w-auto' />
-                    </a>
+                <div className=" flex space-x-2">
+                    <div className='  flex justify-center items-center'>
+                        <a href="/">
+                            <img src={UopLogo} alt="" className='md:max-h-20 h-full max-h-16 w-auto' />
+                        </a>
+
+                    </div>
+                    <div className=' flex flex-col justify-center'>
+                        <h1 className=' md:text-lg font-semibold'>Psychological Wellbeing and Assessment Center</h1>
+                        <p>University of Peradeniya</p>
+                    </div>
                 </div>
                 <div className="py-6">
                     <div className="xl:block hidden">
@@ -92,12 +99,12 @@ const Navbar = () => {
                 <div className="flex justify-center items-center bg-gray-200 bg-opacity-70 fixed inset-0 z-50">
                     <div className="bg-white p-6 rounded-lg w-full max-w-lg mx-4">
                         <h2 className="text-xl font-semibold mb-4">Search</h2>
-                        <input 
-                            type="text" 
-                            value={searchQuery} 
-                            onChange={handleSearch} 
+                        <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={handleSearch}
                             className="text-black-500 h-8 w-full mb-4 p-2 rounded"
-                            placeholder="Search..." 
+                            placeholder="Search..."
                         />
                         <ul className="max-h-60 overflow-y-auto">
                             {filteredData.length === 0 && searchQuery ? (

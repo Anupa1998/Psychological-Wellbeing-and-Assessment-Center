@@ -5,8 +5,8 @@ import logo from '../../assets/uoplogo.png';
 
 const FooterNew = () => {
   return (
-     <footer className='lg:px-24 px-6 w-full border-t-2 border-cusred'>
-                <div className='  flex space-x-4 pt-16 pb-8' >
+     <footer className=' w-full border-t-2 border-cusred'>
+                <div className='lg:px-24 px-6  flex space-x-4 pt-16 pb-16' >
                     <div className='  w-2/5'>
     
                         <img src={logo} alt="University of Peradeniya Logo" className="h-16 mb-4" />
@@ -14,8 +14,8 @@ const FooterNew = () => {
                         <p className="text-gray-600 leading-relaxed mt-4">
                             Psychological Wellbeing and Assessment Center,<br />
                             University of Peradeniya.<br />
-                            <a href="mailto:info@up.ac.lk" className="hover:text-cusred transition underline">info@up.ac.lk</a><br />
-                            <a href="tel:+94123456789" className="hover:text-cusred transition underline">+94 123 456 789</a>
+                            <a href="mailto:info@up.ac.lk" className="hover:text-cusred transition underline">hod.psy@arts.pdn.ac.lk</a><br />
+                            <a href="tel:+94123456789" className="hover:text-cusred transition underline">+94 81 239 2816</a>
                         </p>
                     </div>
     
@@ -57,7 +57,7 @@ const FooterNew = () => {
                         
                         <iframe
                             title="location-map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.019984282839!2d-122.0842496846923!3d37.42206597982571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb24c2f2b9e3b%3A0x2b0b7e1b2b0b7e1b!2sGoogleplex!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.876075700776!2d80.59739019999999!3d7.254942199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368deaaaaaaab%3A0xb5476b88282d47fb!2z4La04Lea4La74LeP4Lav4LeZ4Lar4LeS4La64oCNIOC3gOC3kuC3geC3iuC3gOC3gOC3kuC2r-C3iuKAjeC2uuC3j-C2veC2ug!5e0!3m2!1ssi!2slk!4v1750133494802!5m2!1ssi!2slk"
                             width="100%"
                             height="200"
                             style={{ border: 0 }}
@@ -68,11 +68,14 @@ const FooterNew = () => {
                     </div>
                 </div>
     
-                <div className=' py-8 border-t-2 border-cusred text-center'>
-                    © {new Date().getFullYear()} Psychological Wellbeing and Assessment Center, University of Peradeniya. All rights reserved.
+                <div className=' py-4 border-t-2 bg-cusred text-center text-cuswhite'>
+                    © {new Date().getFullYear()} Psychological Wellbeing and Assessment Centre, University of Peradeniya. All rights reserved. Developed by the IT Center.
+
                 </div>
             </footer>
   )
 }
+
+
 
 export default FooterNew

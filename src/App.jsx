@@ -23,6 +23,7 @@ import { useEffect } from 'react';
 import AllWorkshop from './pages/Workshop/AllWorkshop';
 import AllNewsEvent from './pages/NewsEvent/AllNewsEvent';
 import SingleNewsEvent from './pages/NewsEvent/SingleNewsEvent';
+import SingleWorkhop from './pages/Workshop/SingleWorkhop';
 
 
 function App() {
@@ -52,7 +53,9 @@ function App() {
                     <Route path='/faq' element={<Faq />} />
 
                     <Route path='/workshops' element={<AllWorkshop/>} />
-                    <Route path='/newsevent' element={<AllNewsEvent/>} />
+                    <Route path='/workshops/:workshopid' element={<SingleWorkhop/>} />
+                    
+                    <Route path='/newsevent/:newsid' element={<SingleNewsEvent/>} />
 
 
                     <Route path='/newsevent/:newsid' element={<SingleNewsEvent/>} />

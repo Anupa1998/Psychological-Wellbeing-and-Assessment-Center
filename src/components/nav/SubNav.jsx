@@ -38,12 +38,20 @@ const SubNav = () => {
 
     return (
         <div className="">
+            
+
+
+
+
+
+
+
+
+
+
+
             <div className='xl:px-20 px-4 py-4 bg-cusred text-white'>
-
-
                 <div className=''>
-
-
                     <div className="flex justify-between">
                         <div className="xl:hidden block">
                             <img src={uoplogo} alt="" className='h-8 w-auto' />

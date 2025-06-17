@@ -16,7 +16,7 @@ html::-webkit-scrollbar-track {
 html {
   /* For Firefox */
   scrollbar-width: thin;
-  scrollbar-color: #2A0606 transparent;
+  scrollbar-color: #560606 transparent;
 }
 
 /* For Chrome, Edge, Safari */
@@ -25,7 +25,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #2A0606;
+  background: #560606;
   border-radius: 5rem;
 }
 
