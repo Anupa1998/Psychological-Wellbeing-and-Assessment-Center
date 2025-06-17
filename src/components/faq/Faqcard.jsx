@@ -4,14 +4,14 @@ import { IoIosArrowDropdown } from "react-icons/io";
 const Faqcard = ({ title, description, isOpen, onClick }) => {
 
     return (
-        <div className='border border-l-4 border-l-cuswebyellow p-4 mb-2 rounded-2xl shadow transition-transform duration-100'>
+        <div className='border border-l-4 border-l-cuswebyellow border-cusred p-4 mb-2 rounded-2xl shadow transition-transform duration-100'>
             <div
                 className='flex justify-between items-center cursor-pointer'
                 onClick={onClick}
             >
                 <h4 className='text-lg font-medium'>{title}</h4>
                 <IoIosArrowDropdown
-                    className={`text-3xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                    className={`text-3xl text-cusred transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                 />
             </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Faqcard from '../../components/faq/Faqcard'
+import SearchBar from './SearchBar';
 
 const Faq = () => {
     const data = [
@@ -41,9 +42,16 @@ const Faq = () => {
 
     return (
         <section className='py-16 px-6 lg:px-24'>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight drop-shadow-lg mb-16 text-center">
-                Frequently Asked Questions
-            </h2>
+            
+
+            <h2 className='after:block after:h-[2px] after:w-12 after:mx-auto after:bg-cuswebyellow after:mt-1 text-center text-3xl lg:text-3xl mb-16 font-semibold  text-gray-800'>Frequently Asked Questions</h2>
+
+
+
+            <div className=' flex justify-end'>
+
+                <SearchBar />
+            </div>
 
             <div className=' '>
                 {

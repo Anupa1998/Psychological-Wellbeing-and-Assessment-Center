@@ -3,200 +3,145 @@ import { secNavData } from './NavData'
 import { TiThMenu } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
 import uoplogo from '../../assets/uoplogo.png'
-import { FaFacebook, FaYoutube, FaLinkedin, FaChevronDown, FaChevronRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import NavMenuMobile from './NavMenuMobile';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 const SubNav = () => {
-    const [menuopen, setmenuopen] = useState(false)
-    const [atTop, setAtTop] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    const headleopenmenu = () => {
-        setmenuopen(!menuopen)
+    const handleMenuOpen = () => {
+        setMenuOpen(!menuOpen);
     }
 
-    const checkScroll = () => {
-        if (window.scrollY === 0) {
-            setAtTop(true);
-        } else {
-            setAtTop(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', checkScroll);
-        return () => {
-            window.removeEventListener('scroll', checkScroll);
-        };
-    }, []);
-
-    const [dksubmenu, setdksubmenu] = useState(false)
-    const [dksecsubmenu, setdksecsubmenu] = useState(false)
-
-    const [menuopenmobile, setmenuopenmobilen] = useState(false);
-
     return (
-        <div className="">
-            
+        <div className=" sticky top-0 z-30">
+            <div className='w-full px-6 lg:px-24 py-4 bg-cusred text-cuswhite '>
+                <div className=' hidden lg:block'>
+                    <ul className=' flex space-x-8'>
+                        {
+                            secNavData.map((ele, index) => (
+                                <Link to={ele.link} >
 
-
-
-
-
-
-
-
-
-
-
-            <div className='xl:px-20 px-4 py-4 bg-cusred text-white'>
-                <div className=''>
-                    <div className="flex justify-between">
-                        <div className="xl:hidden block">
-                            <img src={uoplogo} alt="" className='h-8 w-auto' />
-                        </div>
-
-                        <div className="xl:hidden block flex justify-end">
-                            <div className="mr-4 xl:hidden ">
-                                <div className="flex">
-                                    <div className="mx-2">සිං</div>
-                                    <div className="mx-2">த</div>
-                                    <div className="mx-2">A</div>
-                                </div>
-                            </div>
-                            {
-                                menuopen === false ?
-                                    <div className="cursor-pointer">
-                                        <TiThMenu className='h-8 w-auto fill-white' onClick={headleopenmenu} />
-                                    </div>
-                                    :
-                                    <div className="cursor-pointer">
-                                        <IoClose className='h-8 w-auto fill-white' onClick={headleopenmenu} />
-                                    </div>
-                            }
-                        </div>
-                    </div>
-
-
-
-
-
-                    <div className="xl:block hidden flex justify-end">
-                        <div className="flex relative">
-                            {secNavData.map((data, index) => {
-                                return (
-                                    <div
-                                        className={`${atTop ? ' mx-[1%] mt-0' : 'mt-1 mx-4'} `}
-                                        key={index}
-                                        onMouseEnter={() => setdksubmenu(data.id)}
-                                        onMouseLeave={() => setdksubmenu(false)}
-                                    >
-                                        <div className="flex cursor-pointer">
-                                            {data.id && Array.isArray(data.submenu) && data.submenu.length ? (
-                                                <div className={`flex `}>
-                                                    <h1 className={`font-semibold uppercase ${dksubmenu === data.id ? 'text-[#e8b910] border-b border-white' : ''}`}>
-                                                        {data.name}
-                                                    </h1>
-
-                                                    <p className="mt-2 ml-2">
-                                                        <FaChevronDown className="h-3 w-auto" />
-                                                    </p>
-                                                </div>
-                                            ) : (
-                                                <div>
-                                                    <Link to={data.link}>
-                                                        <h1 className={`${atTop ? '' : ''} font-semibold uppercase`}>
-                                                            {data.name}
-                                                        </h1>
-                                                    </Link>
-                                                </div>
-                                            )}
-                                        </div>
-
-                                        {/* Submenu */}
-                                        {dksubmenu === data.id && data.submenu && Array.isArray(data.submenu) && (
-                                            <div className="absolute top-full -left-20 -right-20 bg-none text-white shadow-lg z-50 pt-4 max-h-[100vh] overflow-y-auto">
-                                                <div className="relative"></div>
-                                                <div className='absolute inset-0 bg-black opacity-80 mt-4'></div>
-                                                <div className="p-8 relative">
-                                                    <div className="grid grid-cols-4 gap-0">
-                                                        {data.submenu.map((submenu, submenuIndex) => (
-                                                            <div className="">
-                                                                {submenu.menusubL && Array.isArray(submenu.menusubL) && submenu.menusubL.length > 0 ? (
-                                                                    <div className=" py-4">
-                                                                        <h1 className='text-xl text-[#e8b910]'>{
-                                                                            submenu.name === "Sustainability" ?
-                                                                                <div className="">
-                                                                                    <a href={submenu.link}>
-                                                                                        <h1 className="text-[#e8b910] text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
-                                                                                            {submenu.name}
-                                                                                        </h1>
-                                                                                    </a>
-
-                                                                                </div>
-                                                                                :
-                                                                                <div className="">
-                                                                                    {submenu.name}
-                                                                                </div>
-                                                                        }</h1>
-                                                                        <p className="">
-                                                                            {submenu.menusubL.map((subData, submenuLindex) => (
-                                                                                <div className="">                                                                                                                                                                    {
-                                                                                    (() => {
-                                                                                        if (subData.name === "Policies" || subData.name === "International Collaborations") {
-                                                                                            return (
-                                                                                                <a href={subData.link} className="">
-                                                                                                    <h1 className="my-4 text-[#e8b910] text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
-                                                                                                        {subData.name}
-                                                                                                    </h1>
-                                                                                                </a>
-                                                                                            )
-                                                                                        }
-                                                                                        else {
-                                                                                            return (
-                                                                                                <a href={subData.link} className="">
-                                                                                                    <h1 key={submenuLindex} className="px-4 py-1 hover:bg-[#e8b910] hover:text-[#560606]">
-                                                                                                        {subData.name}
-                                                                                                    </h1>
-                                                                                                </a>
-                                                                                            )
-                                                                                        }
-                                                                                    })()
-                                                                                }
-                                                                                </div>
-
-                                                                            ))}
-                                                                        </p>
-                                                                    </div>
-                                                                ) : (
-                                                                    <div className="py-4">
-                                                                        <a href={submenu.link} className="">
-                                                                            <h1 className="text-[#e8b910] text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
-                                                                                {submenu.name}
-                                                                            </h1>
-                                                                        </a>
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )}
-
-
-                                    </div>
-                                );
-                            })}
-                        </div>
-
-                    </div>
-
+                                    <li className=' font-medium border-b-2 border-transparent duration-300 hover:border-cuswhite'> {ele.name}</li>
+                                </Link>
+                            ))
+                        }
+                    </ul>
                 </div>
-            </div>
 
-            <NavMenuMobile secNavData={secNavData} menuopen={menuopen} />
+                <div className='  lg:hidden flex justify-end transform duration-200'>
+                    {
+                        menuOpen ? (
+                            <IoClose className="h-8 w-auto cursor-pointer " onClick={handleMenuOpen} />
+                        ) : (
+                            <TiThMenu className="h-8 w-auto cursor-pointer " onClick={handleMenuOpen} />
+                        )
+                    }
+                </div>
+
+                {/* <AnimatePresence>
+
+                    {
+                        menuOpen && (
+                            <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+
+                                className=' py-4 px-6 absolute top-full left-0 w-full lg:hidden bg-cusred transition-all duration-300 ease-in-out opacity-100 scale-100'>
+                                <ul className=' space-y-4'>
+                                    {
+                                        secNavData.map((ele, index) => (
+
+                                            <li className=' font-medium border-transparent '>
+                                                <Link to={ele.link} >
+                                                    {ele.name}
+                                                </Link>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </motion.div>
+                        )
+                    }
+                </AnimatePresence> */}
+
+                {/* <AnimatePresence>
+                    {menuOpen && (
+                        <motion.div
+                            key="mobile-nav"
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="absolute top-full left-0 w-full lg:hidden bg-cusred px-6 py-4 z-50 overflow-hidden"
+                        >
+                            <ul className="space-y-4">
+                                {secNavData.map((ele, index) => (
+                                    <li key={index} className="font-medium">
+                                        <Link to={ele.link} onClick={() => setMenuOpen(false)}>
+                                            {ele.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    )}
+                </AnimatePresence> */}
+
+                {/* <AnimatePresence>
+                    {menuOpen && (
+                        <motion.div
+                            key="mobile-nav"
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }} // this slides up on exit
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="absolute top-full left-0 w-full lg:hidden bg-cusred px-6 py-4 z-50"
+                        >
+                            <ul className="space-y-4">
+                                {secNavData.map((ele, index) => (
+                                    <li key={index} className="font-medium">
+                                        <Link to={ele.link} onClick={() => setMenuOpen(false)}>
+                                            {ele.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    )}
+                </AnimatePresence> */}
+
+
+                <AnimatePresence>
+                    {menuOpen && (
+                        <motion.div
+                            key="mobile-nav"
+                            initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -20, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="absolute top-full left-0 w-full lg:hidden bg-cusred px-6 py-4 z-50 shadow-md"
+                        >
+                            <ul className="space-y-4">
+                                {secNavData.map((ele, index) => (
+                                    <li key={index} className="font-medium">
+                                        <Link to={ele.link} onClick={() => setMenuOpen(false)}>
+                                            {ele.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+
+
+            </div>
         </div>
     )
 }

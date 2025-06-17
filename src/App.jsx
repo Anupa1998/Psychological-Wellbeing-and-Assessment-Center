@@ -24,6 +24,7 @@ import AllWorkshop from './pages/Workshop/AllWorkshop';
 import AllNewsEvent from './pages/NewsEvent/AllNewsEvent';
 import SingleNewsEvent from './pages/NewsEvent/SingleNewsEvent';
 import SingleWorkhop from './pages/Workshop/SingleWorkhop';
+import ScrollToTop from './ScrollToTop';
 
 
 function App() {
@@ -35,13 +36,12 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <div>
+                
                     <Navbar />
-                </div>
-                <div>
+                
                     <SubNav />
-                </div>
-
+                
+                    <ScrollToTop/>
                 <Routes>
                     <Route path='*' element={<Error404 />} />
                     <Route path='/' element={<Home />} />
@@ -55,7 +55,7 @@ function App() {
                     <Route path='/workshops' element={<AllWorkshop/>} />
                     <Route path='/workshops/:workshopid' element={<SingleWorkhop/>} />
                     
-                    <Route path='/newsevent/:newsid' element={<SingleNewsEvent/>} />
+                    <Route path='/newsevent' element={<AllNewsEvent/>} />
 
 
                     <Route path='/newsevent/:newsid' element={<SingleNewsEvent/>} />

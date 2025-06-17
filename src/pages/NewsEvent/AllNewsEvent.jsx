@@ -20,6 +20,7 @@ const AllNewsEvent = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
+                        
                         <div className="p-4">
                             <Link to={`/newsevent/${ele.id}`}>
                                 <h3 className="text-lg font-semibold text-gray-800 hover:text-cusred transition duration-300">
