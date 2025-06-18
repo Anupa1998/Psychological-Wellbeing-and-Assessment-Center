@@ -10,7 +10,7 @@ const ImageSet = () => {
       <div className='h-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
         {
           data.filter((ele, index) => index < 3).map((ele, index) => (
-            <div key={index} className="w-full h-[50vh] overflow-hidden relative">
+            <div key={index} className="w-full md:h-[50vh] h-[25vh] overflow-hidden relative">
               <img
                 className="h-full w-full object-cover transform hover:scale-105 transition-transform duration-500"
                 src={ele.img}

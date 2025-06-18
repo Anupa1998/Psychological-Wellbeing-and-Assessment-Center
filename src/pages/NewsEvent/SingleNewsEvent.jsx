@@ -14,13 +14,13 @@ const SingleNewsEvent = () => {
         <section className='py-16 px-6 lg:px-24'>
 
             <div>
-                <div className=' grid grid-cols-2 gap-8'>
+                <div className=' grid md:grid-cols-2 grid-cols-1  gap-8'>
                     <div className=' max-h-80 w-full overflow-hidden bg-amber-50' >
                         <img src={news.img} alt="" className=' object-cover' />
                     </div>
 
                     <div className=' flex items-center'>
-                        <h2 className=' text-3xl lg:text-3xl mb-16 font-semibold  text-gray-800'>{news.name}</h2>
+                        <h2 className=' text-2xl lg:text-3xl font-semibold  text-gray-800'>{news.name}</h2>
                     </div>
                 </div>
 
