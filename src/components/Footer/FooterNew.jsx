@@ -6,8 +6,8 @@ import logo from '../../assets/uoplogo.png';
 const FooterNew = () => {
   return (
      <footer className=' w-full border-t-2 border-cusred'>
-                <div className='lg:px-24 px-6  flex space-x-4 pt-16 pb-16' >
-                    <div className='  w-2/5'>
+                <div className='lg:px-24 px-6  lg:flex lg:space-x-4 space-y-8 pt-16 pb-16' >
+                    <div className='  lg:w-2/5'>
     
                         <img src={logo} alt="University of Peradeniya Logo" className="h-16 mb-4" />
     
@@ -19,8 +19,7 @@ const FooterNew = () => {
                         </p>
                     </div>
     
-    
-                    <div className='  w-1/5'>
+                    <div className='  lg:w-1/5'>
                             <h4 className="text-lg font-semibold mb-3 border-b-2  border-cusred inline-block">Quick Links</h4>
     
                             <ul className="space-y-2">
@@ -53,7 +52,8 @@ const FooterNew = () => {
     
                         
                     </div>
-                    <div className='w-2/5'>
+
+                    <div className='lg:w-2/5'>
                         
                         <iframe
                             title="location-map"
@@ -66,6 +66,7 @@ const FooterNew = () => {
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
+
                 </div>
     
                 <div className=' py-4 border-t-2 bg-cusred text-center text-cuswhite'>

@@ -82,7 +82,7 @@ const Servicse = () => {
                 </p>
             </TitleHeader>
             <section className="py-16 px-6 lg:px-24">
-                <div className='grid grid-cols-2 gap-8'>
+                <div className='grid md:grid-cols-2 gap-8'>
                     {
                         services.map((ele, index) => (
 

@@ -6,7 +6,7 @@ const TeamCard = ({ onClick, name, position, img, email }) => {
     return (
         <div className="max-w-xl w-full cursor-default  rounded-2xl customShadow flex flex-col md:flex-row overflow-hidden hover:shadow-lg transition-shadow duration-300" >
             {/* Image Section */}
-            <div className="md:w-1/3 w-full overflow-hidden  h-64 md:h-64">
+            <div className="md:w-1/3 w-full overflow-hidden  md:h-64">
                 <img
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                     src={img}
