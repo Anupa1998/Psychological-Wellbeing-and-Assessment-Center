@@ -16,7 +16,7 @@ const LoginSignup = () => {
     <div className=''>
       <LoginNav/>
 
-    <section id="reg_login" className=''>
+    <section id="reg_login" className='p-4 '>
       <div className={`container ${isSignup ? "active" : ""} rounded-2xl`}>
 
         {/* Sign In */}
@@ -27,8 +27,6 @@ const LoginSignup = () => {
               alt="signin"
               className=' relative'
             />
-
-
           </div>
 
           <div className="formBx">

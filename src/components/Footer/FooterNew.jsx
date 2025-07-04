@@ -69,7 +69,7 @@ const FooterNew = () => {
 
                 </div>
     
-                <div className=' py-4 border-t-2 bg-cusred text-center text-cuswhite'>
+                <div className=' py-4 border-t-2  text-center '>
                     © {new Date().getFullYear()} Psychological Wellbeing and Assessment Centre, University of Peradeniya. All rights reserved. Developed by the IT Center.
 
                 </div>
