@@ -3,7 +3,6 @@ import './style.css';
 import loginImg from '../../assets/login.jpg'
 import signUpImg from '../../assets/signup.jpg'
 
-import UopLogo from '../../assets/crest.png';
 import LoginNav from '../../components/nav/LoginNav';
 
 const LoginSignup = () => {
