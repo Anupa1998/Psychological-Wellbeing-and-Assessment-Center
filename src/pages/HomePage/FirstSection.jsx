@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import pic from '../../assets/backgroundimage.jpg';
 import pic2 from '../../assets/backgroundimage2.jpg';
 import Button from '../../components/Button/Button';
-// import pic3 from '../../assets/backgroundimage2.jpg';
+import pic3 from '../../assets/backgroundimage3.png';
 
-const bgImages = [pic, pic2];
+const bgImages = [pic3 ,pic, pic2];
 
 const FirstSection = () => {
     const [current, setCurrent] = useState(0);

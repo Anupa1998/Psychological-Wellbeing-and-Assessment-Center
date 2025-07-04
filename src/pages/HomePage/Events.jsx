@@ -18,7 +18,7 @@ const Events = () => {
             </div>
 
             <div data-aos="zoom-in" className=' flex justify-center mt-16'>
-                <Button title={'Explore more workshop'} color='#560606' to='/workshops' />
+                <Button title={'Explore more workshop'} color='#f6bc0c' to='/workshops' />
             </div>
 
         </section>

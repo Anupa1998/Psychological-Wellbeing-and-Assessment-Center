@@ -6,6 +6,7 @@ import uoplogo from '../../assets/uoplogo.png'
 import { Link } from 'react-router-dom';
 import NavMenuMobile from './NavMenuMobile';
 import { motion, AnimatePresence } from 'framer-motion';
+import SearchModal from './SearchModal';
 
 
 const SubNav = () => {
@@ -15,20 +16,50 @@ const SubNav = () => {
         setMenuOpen(!menuOpen);
     }
 
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+
+    
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScrollTop > 90) {
+                setIsVisible(false); // scrolling down, hide
+            } else {
+                setIsVisible(true); // scrolling up, show
+            }
+
+            setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollTop]);
+
+
     return (
         <div className=" sticky top-0 z-30">
-            <div className='w-full px-6 lg:px-24 py-4 bg-cusred text-cuswhite '>
+            <div className='w-full px-6 lg:px-24 py-4 bg-cusred text-cuswhite flex justify-between'>
                 <div className=' hidden lg:block'>
                     <ul className=' flex space-x-8'>
                         {
                             secNavData.map((ele, index) => (
-                                <Link to={ele.link} >
+                                <Link to={ele.link} key={index} >
 
                                     <li className=' font-medium border-b-2 border-transparent duration-300 hover:border-cuswhite'> {ele.name}</li>
                                 </Link>
                             ))
                         }
                     </ul>
+                </div>
+
+                <div
+                    className={`transition-opacity duration-300 
+                    ${isVisible ? 'opacity-0 pointer-events-none ' : 'opacity-100 pointer-events-auto'}`}
+                >
+                    <SearchModal />
                 </div>
 
                 <div className='  lg:hidden flex justify-end transform duration-200'>
@@ -63,9 +94,6 @@ const SubNav = () => {
                         </motion.div>
                     )}
                 </AnimatePresence>
-
-
-
             </div>
         </div>
     )

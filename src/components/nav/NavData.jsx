@@ -2,7 +2,7 @@ const MainNavData = [
     {
         id: 3,
         name: 'Login',
-        link: '#',
+        link: '/login',
     },
     {
         id: 6,

@@ -18,7 +18,7 @@ const EventCard = ({ event }) => {
         {/* Content Section */}
         <div className="md:w-2/3 w-full p-8 flex flex-col justify-between ">
           {/* Gradient Date Badge */}
-            <div className="absolute top-4 right-4 md:block bg-gradient-to-r from-[#f6bc0c] via-orange-400 to-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+            <div className="absolute top-4 right-4 md:block bg-cusred text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
               APR 09
             </div>
 
@@ -44,9 +44,9 @@ const EventCard = ({ event }) => {
               <a
                 href={event.registerLink}
                 target="_blank"
-                className="inline-block text-center bg-gradient-to-r from-[#f6bc0c] via-orange-400 to-red-500
+                className="inline-block text-center bg-cusred
                         text-white px-6 py-2 rounded-xl font-semibold shadow-lg transition duration-300 ease-in-out
-                          hover:scale-105 hover:shadow-xl hover:brightness-110"
+                          hover:shadow-xl hover:brightness-150"
               >
                 Register
               </a>
