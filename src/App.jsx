@@ -24,7 +24,7 @@ import SingleWorkhop from './pages/Workshop/SingleWorkhop';
 import ScrollToTop from './ScrollToTop';
 import { useLocation } from 'react-router-dom';
 import LoginNav from './components/nav/LoginNav';
-import LoginSignup from './pages/Login&Register/LoginSignup';
+import LoginSignup from './pages/LoginRegister/LoginSignup';
 
 function App() {
     const location = useLocation();
